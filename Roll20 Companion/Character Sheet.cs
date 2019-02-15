@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace Roll20_Companion
 {
-    public partial class Form1 : Form
+    public partial class CharacterSheet: Form
     {
-        public Form1()
+        public CharacterSheet()
         {
             InitializeComponent();
         }
@@ -13,12 +13,9 @@ namespace Roll20_Companion
         private void MakeMacro(object sender, EventArgs e)
         {
             var foo = BAB.Text;
-            var bar = Str.Text;
+            var bar = StrScore.Text;
 
-
-
-            ResultsBox.Text = foo + " " + bar;
-            ResultsBox.Refresh();
+            
         }
 
         private void ValidateNumeric(object sender, KeyPressEventArgs e)
@@ -27,6 +24,11 @@ namespace Roll20_Companion
             {
                 e.Handled = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
