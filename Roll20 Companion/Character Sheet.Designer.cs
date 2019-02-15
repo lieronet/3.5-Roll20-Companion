@@ -65,7 +65,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.WeaponList = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -388,13 +388,13 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Weapons";
             // 
-            // listView1
+            // WeaponList
             // 
-            this.listView1.Location = new System.Drawing.Point(20, 261);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(280, 87);
-            this.listView1.TabIndex = 39;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.WeaponList.Location = new System.Drawing.Point(20, 261);
+            this.WeaponList.Name = "WeaponList";
+            this.WeaponList.Size = new System.Drawing.Size(280, 87);
+            this.WeaponList.TabIndex = 39;
+            this.WeaponList.UseCompatibleStateImageBehavior = false;
             // 
             // button2
             // 
@@ -414,14 +414,14 @@
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // CharacterSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 559);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.WeaponList);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -459,7 +459,7 @@
             this.Controls.Add(this.StrLabel);
             this.Controls.Add(this.BAB);
             this.Controls.Add(this.StrScore);
-            this.Name = "Form1";
+            this.Name = "CharacterSheet";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -505,7 +505,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView WeaponList;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
     }

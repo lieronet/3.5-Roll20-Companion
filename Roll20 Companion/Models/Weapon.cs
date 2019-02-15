@@ -2,7 +2,20 @@
 {
     class Weapon
     {
-        public Dice DamageDie {get;set;}
+        public Dice DamageDieSize { get; set; }
+        public int DamageDice { get; set; }
+        public int Range { get; set; }
+        public DamageType DamageType { get; set; }
+        public bool OneHanded { get; set; }
+        public bool Light { get; set; }
+        public int CritLowerBound { get; set; }
+        public int CritDamage { get; set; }
+        public string Name { get; set; }
+
+        public Weapon() : base()
+        {
+
+        }
 
     }
 }

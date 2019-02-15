@@ -12,7 +12,7 @@
         d20,
         d100
     }
-    public enum DamageTypes
+    public enum DamageType
     {
         Untyped,
         Slashing,
@@ -23,6 +23,34 @@
         Cold,
         Acid,
         Electricity,
-
+        Sonic,
+        PositiveEnergy,
+        NegativeEnergy,
+        Divine,
+        Vile,
+        NonLethal,
+        Strength,
+        Dexterity,
+        Constitution,
+        Intelligence,
+        Wisdom,
+        Charisma
+    }
+    public enum BonusType
+    {
+        Untyped,
+        Morale,
+        Magic,
+        Sacred,
+        Profane,
+        Dodge,
+        Deflection,
+        NaturalArmor,
+        Armor,
+        Shield,
+        ArmorEnhancement,
+        ShieldEnhancement,
+        NaturalArmorEnhancement,
+        Size
     }
 }

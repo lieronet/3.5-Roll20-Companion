@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Roll20_Companion.Models;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Roll20_Companion
 {
-    public partial class CharacterSheet: Form
+    partial class CharacterSheet: Form
     {
+        public List<Weapon> Weapons;
+        public List<string> Buffs;
+
         public CharacterSheet()
         {
             InitializeComponent();
@@ -14,8 +19,6 @@ namespace Roll20_Companion
         {
             var foo = BAB.Text;
             var bar = StrScore.Text;
-
-            
         }
 
         private void ValidateNumeric(object sender, KeyPressEventArgs e)

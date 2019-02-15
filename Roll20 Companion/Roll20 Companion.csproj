@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddWeaponBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWeaponBox.Designer.cs">
+      <DependentUpon>AddWeaponBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\CharacterDetails.cs" />
     <Compile Include="Character Sheet.cs">
       <SubType>Form</SubType>
@@ -58,6 +64,9 @@
     <Compile Include="Models\Weapon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddWeaponBox.resx">
+      <DependentUpon>AddWeaponBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Character Sheet.resx">
       <DependentUpon>Character Sheet.cs</DependentUpon>
     </EmbeddedResource>
