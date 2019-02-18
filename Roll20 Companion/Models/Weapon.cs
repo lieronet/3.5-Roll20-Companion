@@ -9,7 +9,7 @@
         public bool OneHanded { get; set; }
         public bool Light { get; set; }
         public int CritLowerBound { get; set; }
-        public int CritDamage { get; set; }
+        public int CritMultiplier { get; set; }
         public string Name { get; set; }
 
         public Weapon() : base()

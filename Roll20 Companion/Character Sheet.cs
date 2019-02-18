@@ -1,14 +1,12 @@
 ﻿using Roll20_Companion.Models;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Roll20_Companion
 {
     partial class CharacterSheet: Form
     {
-        public List<Weapon> Weapons;
-        public List<string> Buffs;
+        public CharacterDetails Character;
 
         public CharacterSheet()
         {
