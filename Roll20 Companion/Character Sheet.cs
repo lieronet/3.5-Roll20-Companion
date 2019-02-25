@@ -1,6 +1,8 @@
 ﻿using Roll20_Companion.Models;
 using System;
+using System.IO;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Roll20_Companion
 {
@@ -11,6 +13,19 @@ namespace Roll20_Companion
         public CharacterSheet()
         {
             InitializeComponent();
+            Character = new CharacterDetails();
+
+
+        }
+
+        public CharacterSheet(FileStream characterSheet)
+        {
+            InitializeComponent();
+            //TODO: once I have a window for loading in a character, deserialize the XML there and pass in the object
+            //that way I can do error handling before opening the window
+            XmlSerializer mySerializer = new XmlSerializer(typeof(CharacterDetails));
+            Character = (CharacterDetails)mySerializer.Deserialize(characterSheet);
+            
         }
 
         private void MakeMacro(object sender, EventArgs e)
@@ -30,6 +45,24 @@ namespace Roll20_Companion
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "XML File|*.xml";
+            sfd.Title = "Save Character";
+
+            if(sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                using (StreamWriter writer = new StreamWriter(File.Create(sfd.FileName)))
+                {
+                    XmlSerializer myXmlSerializer = new XmlSerializer(typeof(CharacterDetails));
+                    //writer.Write(myXmlSerializer.Serialize(writer,)
+                    myXmlSerializer.Serialize(writer, Character);
+                    writer.Close();
+                }
+            }
         }
     }
 }

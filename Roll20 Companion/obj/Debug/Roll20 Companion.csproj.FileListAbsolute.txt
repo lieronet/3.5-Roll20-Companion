@@ -18,3 +18,4 @@ C:\Code\Roll20 Companion\Roll20 Companion\obj\Debug\Roll20 Companion.csproj.Gene
 C:\Code\Roll20 Companion\Roll20 Companion\obj\Debug\Roll20 Companion.csproj.CoreCompileInputs.cache
 C:\Code\Roll20 Companion\Roll20 Companion\obj\Debug\Roll20 Companion.exe
 C:\Code\Roll20 Companion\Roll20 Companion\obj\Debug\Roll20 Companion.pdb
+C:\Code\Roll20 Companion\Roll20 Companion\obj\Debug\Roll20_Companion.AddWeaponBox.resources
