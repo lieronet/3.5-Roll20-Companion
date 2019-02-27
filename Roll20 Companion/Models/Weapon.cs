@@ -1,6 +1,6 @@
 ﻿namespace Roll20_Companion.Models
 {
-    class Weapon
+    public class Weapon
     {
         public Dice DamageDieSize { get; set; }
         public int DamageDice { get; set; }

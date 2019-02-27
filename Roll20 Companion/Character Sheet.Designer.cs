@@ -41,20 +41,13 @@
             this.WisScore = new System.Windows.Forms.TextBox();
             this.ChaLabel = new System.Windows.Forms.Label();
             this.ChaScore = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.chaAbilityMod = new System.Windows.Forms.TextBox();
+            this.wisAbilityMod = new System.Windows.Forms.TextBox();
+            this.intAbilityMod = new System.Windows.Forms.TextBox();
+            this.conAbilityMod = new System.Windows.Forms.TextBox();
+            this.dexAbilityMod = new System.Windows.Forms.TextBox();
+            this.strAbilityMod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,12 +57,20 @@
             this.button3 = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.chaEnhBonus = new System.Windows.Forms.TextBox();
+            this.wisEnhBonus = new System.Windows.Forms.TextBox();
+            this.intEnhBonus = new System.Windows.Forms.TextBox();
+            this.conEnhBonus = new System.Windows.Forms.TextBox();
+            this.dexEnhBonus = new System.Windows.Forms.TextBox();
+            this.strEnhBonus = new System.Windows.Forms.TextBox();
+            this.strTempMod = new System.Windows.Forms.TextBox();
+            this.dexTempMod = new System.Windows.Forms.TextBox();
+            this.conTempMod = new System.Windows.Forms.TextBox();
+            this.intTempMod = new System.Windows.Forms.TextBox();
+            this.wisTempMod = new System.Windows.Forms.TextBox();
+            this.chaTempMod = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.LoadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // StrScore
@@ -84,6 +85,7 @@
             // BAB
             // 
             this.BAB.Location = new System.Drawing.Point(496, 69);
+            this.BAB.MaxLength = 2;
             this.BAB.Name = "BAB";
             this.BAB.Size = new System.Drawing.Size(43, 20);
             this.BAB.TabIndex = 1;
@@ -188,54 +190,6 @@
             this.ChaScore.TabIndex = 13;
             this.ChaScore.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(171, 199);
-            this.textBox1.MaxLength = 2;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(43, 20);
-            this.textBox1.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(171, 173);
-            this.textBox2.MaxLength = 2;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(43, 20);
-            this.textBox2.TabIndex = 19;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(171, 147);
-            this.textBox3.MaxLength = 2;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(43, 20);
-            this.textBox3.TabIndex = 18;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(171, 121);
-            this.textBox4.MaxLength = 2;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(43, 20);
-            this.textBox4.TabIndex = 17;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(171, 95);
-            this.textBox5.MaxLength = 2;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(43, 20);
-            this.textBox5.TabIndex = 16;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(171, 69);
-            this.textBox6.MaxLength = 2;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(43, 20);
-            this.textBox6.TabIndex = 15;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -246,63 +200,53 @@
             this.label1.Text = "Base\r\nScore\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // chaAbilityMod
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(170, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 26);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Temp\r\nModifier";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chaAbilityMod.Location = new System.Drawing.Point(220, 199);
+            this.chaAbilityMod.MaxLength = 2;
+            this.chaAbilityMod.Name = "chaAbilityMod";
+            this.chaAbilityMod.Size = new System.Drawing.Size(43, 20);
+            this.chaAbilityMod.TabIndex = 34;
             // 
-            // textBox13
+            // wisAbilityMod
             // 
-            this.textBox13.Location = new System.Drawing.Point(220, 199);
-            this.textBox13.MaxLength = 2;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(43, 20);
-            this.textBox13.TabIndex = 34;
+            this.wisAbilityMod.Location = new System.Drawing.Point(220, 173);
+            this.wisAbilityMod.MaxLength = 2;
+            this.wisAbilityMod.Name = "wisAbilityMod";
+            this.wisAbilityMod.Size = new System.Drawing.Size(43, 20);
+            this.wisAbilityMod.TabIndex = 33;
             // 
-            // textBox14
+            // intAbilityMod
             // 
-            this.textBox14.Location = new System.Drawing.Point(220, 173);
-            this.textBox14.MaxLength = 2;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(43, 20);
-            this.textBox14.TabIndex = 33;
+            this.intAbilityMod.Location = new System.Drawing.Point(220, 147);
+            this.intAbilityMod.MaxLength = 2;
+            this.intAbilityMod.Name = "intAbilityMod";
+            this.intAbilityMod.Size = new System.Drawing.Size(43, 20);
+            this.intAbilityMod.TabIndex = 32;
             // 
-            // textBox15
+            // conAbilityMod
             // 
-            this.textBox15.Location = new System.Drawing.Point(220, 147);
-            this.textBox15.MaxLength = 2;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(43, 20);
-            this.textBox15.TabIndex = 32;
+            this.conAbilityMod.Location = new System.Drawing.Point(220, 121);
+            this.conAbilityMod.MaxLength = 2;
+            this.conAbilityMod.Name = "conAbilityMod";
+            this.conAbilityMod.Size = new System.Drawing.Size(43, 20);
+            this.conAbilityMod.TabIndex = 31;
             // 
-            // textBox16
+            // dexAbilityMod
             // 
-            this.textBox16.Location = new System.Drawing.Point(220, 121);
-            this.textBox16.MaxLength = 2;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(43, 20);
-            this.textBox16.TabIndex = 31;
+            this.dexAbilityMod.Location = new System.Drawing.Point(220, 95);
+            this.dexAbilityMod.MaxLength = 2;
+            this.dexAbilityMod.Name = "dexAbilityMod";
+            this.dexAbilityMod.Size = new System.Drawing.Size(43, 20);
+            this.dexAbilityMod.TabIndex = 30;
             // 
-            // textBox17
+            // strAbilityMod
             // 
-            this.textBox17.Location = new System.Drawing.Point(220, 95);
-            this.textBox17.MaxLength = 2;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(43, 20);
-            this.textBox17.TabIndex = 30;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(220, 69);
-            this.textBox18.MaxLength = 2;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(43, 20);
-            this.textBox18.TabIndex = 29;
+            this.strAbilityMod.Location = new System.Drawing.Point(220, 69);
+            this.strAbilityMod.MaxLength = 2;
+            this.strAbilityMod.Name = "strAbilityMod";
+            this.strAbilityMod.Size = new System.Drawing.Size(43, 20);
+            this.strAbilityMod.TabIndex = 29;
             // 
             // label3
             // 
@@ -387,66 +331,136 @@
             this.label7.Text = "Enhancement\r\nBonus";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox19
+            // chaEnhBonus
             // 
-            this.textBox19.Location = new System.Drawing.Point(122, 199);
-            this.textBox19.MaxLength = 2;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(43, 20);
-            this.textBox19.TabIndex = 50;
+            this.chaEnhBonus.Location = new System.Drawing.Point(122, 199);
+            this.chaEnhBonus.MaxLength = 2;
+            this.chaEnhBonus.Name = "chaEnhBonus";
+            this.chaEnhBonus.Size = new System.Drawing.Size(43, 20);
+            this.chaEnhBonus.TabIndex = 50;
             // 
-            // textBox20
+            // wisEnhBonus
             // 
-            this.textBox20.Location = new System.Drawing.Point(122, 173);
-            this.textBox20.MaxLength = 2;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(43, 20);
-            this.textBox20.TabIndex = 49;
+            this.wisEnhBonus.Location = new System.Drawing.Point(122, 173);
+            this.wisEnhBonus.MaxLength = 2;
+            this.wisEnhBonus.Name = "wisEnhBonus";
+            this.wisEnhBonus.Size = new System.Drawing.Size(43, 20);
+            this.wisEnhBonus.TabIndex = 49;
             // 
-            // textBox21
+            // intEnhBonus
             // 
-            this.textBox21.Location = new System.Drawing.Point(122, 147);
-            this.textBox21.MaxLength = 2;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(43, 20);
-            this.textBox21.TabIndex = 48;
+            this.intEnhBonus.Location = new System.Drawing.Point(122, 147);
+            this.intEnhBonus.MaxLength = 2;
+            this.intEnhBonus.Name = "intEnhBonus";
+            this.intEnhBonus.Size = new System.Drawing.Size(43, 20);
+            this.intEnhBonus.TabIndex = 48;
             // 
-            // textBox22
+            // conEnhBonus
             // 
-            this.textBox22.Location = new System.Drawing.Point(122, 121);
-            this.textBox22.MaxLength = 2;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(43, 20);
-            this.textBox22.TabIndex = 47;
+            this.conEnhBonus.Location = new System.Drawing.Point(122, 121);
+            this.conEnhBonus.MaxLength = 2;
+            this.conEnhBonus.Name = "conEnhBonus";
+            this.conEnhBonus.Size = new System.Drawing.Size(43, 20);
+            this.conEnhBonus.TabIndex = 47;
             // 
-            // textBox23
+            // dexEnhBonus
             // 
-            this.textBox23.Location = new System.Drawing.Point(122, 95);
-            this.textBox23.MaxLength = 2;
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(43, 20);
-            this.textBox23.TabIndex = 46;
+            this.dexEnhBonus.Location = new System.Drawing.Point(122, 95);
+            this.dexEnhBonus.MaxLength = 2;
+            this.dexEnhBonus.Name = "dexEnhBonus";
+            this.dexEnhBonus.Size = new System.Drawing.Size(43, 20);
+            this.dexEnhBonus.TabIndex = 46;
             // 
-            // textBox24
+            // strEnhBonus
             // 
-            this.textBox24.Location = new System.Drawing.Point(122, 69);
-            this.textBox24.MaxLength = 2;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(43, 20);
-            this.textBox24.TabIndex = 45;
+            this.strEnhBonus.AcceptsReturn = true;
+            this.strEnhBonus.Location = new System.Drawing.Point(122, 69);
+            this.strEnhBonus.MaxLength = 2;
+            this.strEnhBonus.Name = "strEnhBonus";
+            this.strEnhBonus.Size = new System.Drawing.Size(43, 20);
+            this.strEnhBonus.TabIndex = 45;
+            // 
+            // strTempMod
+            // 
+            this.strTempMod.Location = new System.Drawing.Point(171, 69);
+            this.strTempMod.MaxLength = 2;
+            this.strTempMod.Name = "strTempMod";
+            this.strTempMod.Size = new System.Drawing.Size(43, 20);
+            this.strTempMod.TabIndex = 15;
+            // 
+            // dexTempMod
+            // 
+            this.dexTempMod.Location = new System.Drawing.Point(171, 95);
+            this.dexTempMod.MaxLength = 2;
+            this.dexTempMod.Name = "dexTempMod";
+            this.dexTempMod.Size = new System.Drawing.Size(43, 20);
+            this.dexTempMod.TabIndex = 16;
+            // 
+            // conTempMod
+            // 
+            this.conTempMod.Location = new System.Drawing.Point(171, 121);
+            this.conTempMod.MaxLength = 2;
+            this.conTempMod.Name = "conTempMod";
+            this.conTempMod.Size = new System.Drawing.Size(43, 20);
+            this.conTempMod.TabIndex = 17;
+            // 
+            // intTempMod
+            // 
+            this.intTempMod.Location = new System.Drawing.Point(171, 147);
+            this.intTempMod.MaxLength = 2;
+            this.intTempMod.Name = "intTempMod";
+            this.intTempMod.Size = new System.Drawing.Size(43, 20);
+            this.intTempMod.TabIndex = 18;
+            // 
+            // wisTempMod
+            // 
+            this.wisTempMod.Location = new System.Drawing.Point(171, 173);
+            this.wisTempMod.MaxLength = 2;
+            this.wisTempMod.Name = "wisTempMod";
+            this.wisTempMod.Size = new System.Drawing.Size(43, 20);
+            this.wisTempMod.TabIndex = 19;
+            // 
+            // chaTempMod
+            // 
+            this.chaTempMod.Location = new System.Drawing.Point(171, 199);
+            this.chaTempMod.MaxLength = 2;
+            this.chaTempMod.Name = "chaTempMod";
+            this.chaTempMod.Size = new System.Drawing.Size(43, 20);
+            this.chaTempMod.TabIndex = 20;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(170, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 26);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Temp\r\nModifier";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LoadButton
+            // 
+            this.LoadButton.Location = new System.Drawing.Point(122, 495);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(75, 23);
+            this.LoadButton.TabIndex = 52;
+            this.LoadButton.Text = "Load";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_OnClick);
             // 
             // CharacterSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 559);
+            this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
+            this.Controls.Add(this.chaEnhBonus);
+            this.Controls.Add(this.wisEnhBonus);
+            this.Controls.Add(this.intEnhBonus);
+            this.Controls.Add(this.conEnhBonus);
+            this.Controls.Add(this.dexEnhBonus);
+            this.Controls.Add(this.strEnhBonus);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
@@ -455,20 +469,20 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.chaAbilityMod);
+            this.Controls.Add(this.wisAbilityMod);
+            this.Controls.Add(this.intAbilityMod);
+            this.Controls.Add(this.conAbilityMod);
+            this.Controls.Add(this.dexAbilityMod);
+            this.Controls.Add(this.strAbilityMod);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.chaTempMod);
+            this.Controls.Add(this.wisTempMod);
+            this.Controls.Add(this.intTempMod);
+            this.Controls.Add(this.conTempMod);
+            this.Controls.Add(this.dexTempMod);
+            this.Controls.Add(this.strTempMod);
             this.Controls.Add(this.ChaLabel);
             this.Controls.Add(this.ChaScore);
             this.Controls.Add(this.WisLabel);
@@ -504,20 +518,13 @@
         private System.Windows.Forms.TextBox WisScore;
         private System.Windows.Forms.Label ChaLabel;
         private System.Windows.Forms.TextBox ChaScore;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox chaAbilityMod;
+        private System.Windows.Forms.TextBox wisAbilityMod;
+        private System.Windows.Forms.TextBox intAbilityMod;
+        private System.Windows.Forms.TextBox conAbilityMod;
+        private System.Windows.Forms.TextBox dexAbilityMod;
+        private System.Windows.Forms.TextBox strAbilityMod;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -527,12 +534,20 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox chaEnhBonus;
+        private System.Windows.Forms.TextBox wisEnhBonus;
+        private System.Windows.Forms.TextBox intEnhBonus;
+        private System.Windows.Forms.TextBox conEnhBonus;
+        private System.Windows.Forms.TextBox dexEnhBonus;
+        private System.Windows.Forms.TextBox strEnhBonus;
+        private System.Windows.Forms.TextBox strTempMod;
+        private System.Windows.Forms.TextBox dexTempMod;
+        private System.Windows.Forms.TextBox conTempMod;
+        private System.Windows.Forms.TextBox intTempMod;
+        private System.Windows.Forms.TextBox wisTempMod;
+        private System.Windows.Forms.TextBox chaTempMod;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button LoadButton;
     }
 }
 

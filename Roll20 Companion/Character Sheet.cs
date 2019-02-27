@@ -15,7 +15,8 @@ namespace Roll20_Companion
             InitializeComponent();
             Character = new CharacterDetails();
 
-
+            strEnhBonus.DataBindings.Add("Text", Character.CharacterAttributes.Str, "EnhancementBonus");
+            conEnhBonus.DataBindings.Add("Text", Character.CharacterAttributes.Con, "EnhancementBonus");
         }
 
         public CharacterSheet(FileStream characterSheet)
@@ -53,7 +54,7 @@ namespace Roll20_Companion
             sfd.Filter = "XML File|*.xml";
             sfd.Title = "Save Character";
 
-            if(sfd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if(sfd.ShowDialog() == DialogResult.OK)
             {
                 using (StreamWriter writer = new StreamWriter(File.Create(sfd.FileName)))
                 {
@@ -62,6 +63,22 @@ namespace Roll20_Companion
                     myXmlSerializer.Serialize(writer, Character);
                     writer.Close();
                 }
+            }
+        }
+
+        private void LoadButton_OnClick(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "XML File|*.xml";
+            ofd.Title = "Open Character";
+
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                var characterSheet = ofd.OpenFile();
+
+                XmlSerializer mySerializer = new XmlSerializer(typeof(CharacterDetails));
+                Character = (CharacterDetails)mySerializer.Deserialize(characterSheet);
             }
         }
     }

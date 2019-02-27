@@ -2,7 +2,7 @@
 
 namespace Roll20_Companion.Models
 {
-    class CharacterDetails
+    public class CharacterDetails
     {
         public List<Weapon> Weapons;
         public Attributes CharacterAttributes;
@@ -11,6 +11,7 @@ namespace Roll20_Companion.Models
         public CharacterDetails()
         {
             CharacterAttributes = new Attributes();
+            Weapons = new List<Weapon>();
             BAB = 0;
         }
     }

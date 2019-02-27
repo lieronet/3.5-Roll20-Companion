@@ -52,6 +52,7 @@
     <Compile Include="AddWeaponBox.Designer.cs">
       <DependentUpon>AddWeaponBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\CharacterAttribute.cs" />
     <Compile Include="Models\CharacterDetails.cs" />
     <Compile Include="Character Sheet.cs">
       <SubType>Form</SubType>
