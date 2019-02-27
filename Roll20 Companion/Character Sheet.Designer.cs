@@ -338,6 +338,7 @@
             this.chaEnhBonus.Name = "chaEnhBonus";
             this.chaEnhBonus.Size = new System.Drawing.Size(43, 20);
             this.chaEnhBonus.TabIndex = 50;
+            this.chaEnhBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // wisEnhBonus
             // 
@@ -346,6 +347,7 @@
             this.wisEnhBonus.Name = "wisEnhBonus";
             this.wisEnhBonus.Size = new System.Drawing.Size(43, 20);
             this.wisEnhBonus.TabIndex = 49;
+            this.wisEnhBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // intEnhBonus
             // 
@@ -354,6 +356,7 @@
             this.intEnhBonus.Name = "intEnhBonus";
             this.intEnhBonus.Size = new System.Drawing.Size(43, 20);
             this.intEnhBonus.TabIndex = 48;
+            this.intEnhBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // conEnhBonus
             // 
@@ -362,6 +365,7 @@
             this.conEnhBonus.Name = "conEnhBonus";
             this.conEnhBonus.Size = new System.Drawing.Size(43, 20);
             this.conEnhBonus.TabIndex = 47;
+            this.conEnhBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // dexEnhBonus
             // 
@@ -370,6 +374,7 @@
             this.dexEnhBonus.Name = "dexEnhBonus";
             this.dexEnhBonus.Size = new System.Drawing.Size(43, 20);
             this.dexEnhBonus.TabIndex = 46;
+            this.dexEnhBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // strEnhBonus
             // 
@@ -379,6 +384,7 @@
             this.strEnhBonus.Name = "strEnhBonus";
             this.strEnhBonus.Size = new System.Drawing.Size(43, 20);
             this.strEnhBonus.TabIndex = 45;
+            this.strEnhBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // strTempMod
             // 
@@ -387,6 +393,7 @@
             this.strTempMod.Name = "strTempMod";
             this.strTempMod.Size = new System.Drawing.Size(43, 20);
             this.strTempMod.TabIndex = 15;
+            this.strTempMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // dexTempMod
             // 
@@ -395,6 +402,7 @@
             this.dexTempMod.Name = "dexTempMod";
             this.dexTempMod.Size = new System.Drawing.Size(43, 20);
             this.dexTempMod.TabIndex = 16;
+            this.dexTempMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // conTempMod
             // 
@@ -403,6 +411,7 @@
             this.conTempMod.Name = "conTempMod";
             this.conTempMod.Size = new System.Drawing.Size(43, 20);
             this.conTempMod.TabIndex = 17;
+            this.conTempMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // intTempMod
             // 
@@ -411,6 +420,7 @@
             this.intTempMod.Name = "intTempMod";
             this.intTempMod.Size = new System.Drawing.Size(43, 20);
             this.intTempMod.TabIndex = 18;
+            this.intTempMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // wisTempMod
             // 
@@ -419,6 +429,7 @@
             this.wisTempMod.Name = "wisTempMod";
             this.wisTempMod.Size = new System.Drawing.Size(43, 20);
             this.wisTempMod.TabIndex = 19;
+            this.wisTempMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // chaTempMod
             // 
@@ -427,6 +438,7 @@
             this.chaTempMod.Name = "chaTempMod";
             this.chaTempMod.Size = new System.Drawing.Size(43, 20);
             this.chaTempMod.TabIndex = 20;
+            this.chaTempMod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateNumeric);
             // 
             // label2
             // 
